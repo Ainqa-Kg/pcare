@@ -1,14 +1,9 @@
 #!/bin/bash
 
-path="Users\SathishRakin\Documents\pcare"
+cd ~/Users/SathishRakin/Documents/pcare"
 
-while true
+git add .
 
-do
+git commit -m 
 
-	cd $path > /dev/null &> /dev/null
-	git add --all > /dev/null &> /dev/null
-	git commit -m "Auto-Commit at : " &> /dev/null
-	git pull > /dev/null &> /dev/null
-	git push -u origin master &> /dev/null
-done
+git push -u origin main 
