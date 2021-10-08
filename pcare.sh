@@ -1,9 +1,9 @@
-#!/bin/bash
-
 cd ~/Documents/pcare
 
 git add .
 
-git commit -m 
+Date=$(Date)
+
+git commit -m "Chnages made $Date"
 
 git push -u origin main 
