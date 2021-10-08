@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/Users/SathishRakin/Documents/pcare"
+cd ~/Documents/pcare
 
 git add .
 
