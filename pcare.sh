@@ -4,6 +4,6 @@ git add .
 
 Date=$(Date)
 
-git commit -m "Chnages made $Date"
+git commit -m "Changes made $Date"
 
 git push -u origin main 
