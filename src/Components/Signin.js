@@ -49,6 +49,9 @@ class SignIn extends React.Component {
             },
             data: data
         };
+        
+
+        
         axios(configs)
             .then(function (response) {
                 console.log(JSON.stringify(response.data));
@@ -66,6 +69,7 @@ class SignIn extends React.Component {
         },
     };
 
+   
     render() {
         return (
             <div id={"signIn-parent-div"}>
@@ -240,7 +244,7 @@ class SignIn extends React.Component {
                                 <H6
                                     name={this.state.error}
                                     style={{
-                                        fontSize: "1px",
+                                        fontSize: "12px",
                                         color: "red",
                                         textAlign: "left",
                                         fontStyle: "lato",
