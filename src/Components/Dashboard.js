@@ -10,6 +10,8 @@ import { Container, Row, Col, Div, BackgroundImage, Paper, H6, TextInput, } from
 import DonutChart from "react-donut-chart";
 import Spline from './Spline'
 
+
+
 import { Doughnut } from 'react-chartjs-2';
 import { Chart } from 'chart.js';
 
@@ -33,7 +35,15 @@ const data = {
       ],
 
       hoverOffset: 8,
+      options: {
+        legend: {
 
+          position: "bottom",
+
+          align: "start"
+
+        }
+      }
     },
 
   ],
@@ -47,19 +57,15 @@ const option = {
   cutout: '60%',
   plugins: {
     datalabels: {
-      display: true,
+      display: false,
       color: 'white',
+    },
+    legend: {
+      display: true, position: "bottom"
     },
     labels: {
       value: "percentage",
     },
-
-    title: {
-      display: true,
-      text: 'Memory Usage',
-
-    },
-
   },
   animation: {
     animateScale: true,
@@ -95,7 +101,7 @@ export default function Dashboard() {
         id={"signIn-BackgroundImage"}>
         <Paper style={{
           backgroundColor: "#FFFFFF",
-          height: "500px",
+          height: "510px",
           width: "1250px",
           marginTop: "110px",
           borderRadius: "20px",
@@ -110,7 +116,8 @@ export default function Dashboard() {
             width: "300px",
             borderRadius: "10px",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-          }}>Health</Paper>
+          }}>
+            <h4 color="white"> Health</h4></Paper>
           <Paper style={{
             marginLeft: "325px",
             marginTop: "-77.5px",
@@ -177,27 +184,30 @@ export default function Dashboard() {
 
           <Paper style={{
             marginLeft: "22px",
-            marginTop: "-2px",
+            marginTop: "-9px",
             backgroundColor: "",
             height: "320px",
             width: "650px",
             borderRadius: "10px",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+
           }}>
 
+
             <Spline />
+
 
           </Paper>
           <Paper style={{
             marginLeft: "680px",
-            marginTop: "-325px",
+            marginTop: "-328px",
             backgroundColor: "",
             height: "320px",
             width: "550px",
             borderRadius: "10px",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
           }}>
-            <div style={{ width: '300px', marginLeft: '250px' }}>
+            <div style={{ width: '306px', marginLeft: '230px' }}>
 
               <Doughnut
                 data={data}

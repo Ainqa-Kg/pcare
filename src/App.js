@@ -3,6 +3,8 @@ import SignIn from "./Components/Signin"
 import Dashboard from "./Components/Dashboard"
 import Forgetpwd from "./Components/Forgetpwd"
 import Changepwd from "./Components/Changepwd"
+import Table from "./Components/Table"
+
 
 export default function App() {
   return (
@@ -11,10 +13,11 @@ export default function App() {
       <Dashboard />
       {/* <Forgetpwd /> */}
       {/* <Changepwd /> */}
-      {/* {<DoughnutChart />} */}
+      {/* <Table /> */}
+     
     
-   
-    
+
+
     </div>
   )
 }
