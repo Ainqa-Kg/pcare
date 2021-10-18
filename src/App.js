@@ -10,10 +10,10 @@ export default function App() {
   return (
     <div>
       {/* <SignIn /> */}
-      <Dashboard />
+      {/* <Dashboard /> */}
       {/* <Forgetpwd /> */}
       {/* <Changepwd /> */}
-      {/* <Table /> */}
+      <Table />
      
     
 

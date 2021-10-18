@@ -14,7 +14,45 @@ import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import ButtonUnstyled, { buttonUnstyledClasses } from '@mui/core/ButtonUnstyled';
-import { styled } from '@mui/system';
+import { styled } from '@mui/material/styles';
+
+
+const StyledTabs = styled((props) => (
+    <Tabs
+        {...props}
+        TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
+    />
+))({
+    '& .MuiTabs-indicator': {
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '14px',
+        backgroundColor: 'transparent',
+    },
+    '& .MuiTabs-indicatorSpan': {
+        maxWidth: 50,
+        width: '100%',
+        backgroundColor: '#00205C',
+    },
+});
+
+const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
+    ({ theme }) => ({
+        textTransform: 'none',
+        fontWeight: theme.typography.fontWeightRegular,
+        fontSize: theme.typography.pxToRem(12.5),
+        marginTop: theme.spacing(-8),
+        marginLeft: theme.spacing(15),
+        // color: 'rgba(255, 255, 255, 0.7)',
+        '&.Mui-selected': {
+            color: '#000000',
+        },
+        '&.Mui-focusVisible': {
+            backgroundColor: 'rgba(100, 95, 228, 0.32)',
+
+        },
+    }),
+);
 
 const CustomButtonRoot = styled('span')(`
   background-color: #00205C;
@@ -169,18 +207,26 @@ export default function DataTable() {
                     marginTop: "-510px",
                     marginLeft: "-1260px",
                 }}>
-                    <img src={Anqlogo} alt="anqlogo.svg" style={{ marginTop: "15px" }} />
-                    {/* <Tabs value={value} onChange={handleChange}>
-                        <Tab label="Dashboard" />
-                        <Tab label="Leader Board" />
-                    </Tabs> */}
+                    <img src={Anqlogo} alt="anqlogo.svg" style={{ marginTop: "10px", marginLeft: "-3px" }} />
+
+                    <Box sx={{ width: '20%', marginLeft: '-10px', }}>
+                        <Box >
+                            <StyledTabs
+                                value={value}
+                                onChange={handleChange}
+                                aria-label="styled tabs example">
+                                <StyledTab label="Dashboard" />
+                                <StyledTab label="Leader Board" />
+                            </StyledTabs>
+                        </Box>
+                    </Box>
                     <Paper style={{
                         background: "white",
                         height: "55px",
                         width: "200px",
                         marginLeft: "1050px",
                         borderRadius: "10px",
-                        marginTop: "-55px",
+                        marginTop: "-100px",
                     }}>
                         <Stack direction="row" spacing={2} >
                             <Avatar sx={{ width: 45, height: 45, marginLeft: "4.5px", marginTop: "4.5px" }} variant="rounded" alt="Remy Sharp" src="/static/images/avatar/1.jpg" />

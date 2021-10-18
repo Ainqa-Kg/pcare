@@ -6,16 +6,52 @@ import Tab from '@mui/material/Tab';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { Container, Row, Col, Div, BackgroundImage, Paper, H6, TextInput, } from "qdm-component-library";
-// import "./styles.css";
 import DonutChart from "react-donut-chart";
 import Spline from './Spline'
-
-
-
 import { Doughnut } from 'react-chartjs-2';
 import { Chart } from 'chart.js';
-
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+
+const StyledTabs = styled((props) => (
+  <Tabs
+    {...props}
+    TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
+  />
+))({
+  '& .MuiTabs-indicator': {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '19px',
+    backgroundColor: 'transparent',
+  },
+  '& .MuiTabs-indicatorSpan': {
+    maxWidth: 50,
+    width: '100%',
+    backgroundColor: '#00205C',
+  },
+});
+
+const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
+  ({ theme }) => ({
+    textTransform: 'none',
+    fontWeight: theme.typography.fontWeightRegular,
+    fontSize: theme.typography.pxToRem(12.5),
+    marginRight: theme.spacing(1),
+    marginTop: theme.spacing(-1),
+    marginLeft: theme.spacing(-1.5),
+    // color: 'rgba(255, 255, 255, 0.7)',
+    '&.Mui-selected': {
+      color: '#000000',
+    },
+    '&.Mui-focusVisible': {
+      backgroundColor: 'rgba(100, 95, 228, 0.32)',
+
+    },
+  }),
+);
+
 Chart.register(ChartDataLabels);
 
 const data = {
@@ -225,12 +261,21 @@ export default function Dashboard() {
           marginTop: "-510px",
           marginLeft: "-1260px",
         }}>
-          <img src={Anqlogo} alt="anqlogo.svg" style={{ marginTop: "15px" }} />
+          <img src={Anqlogo} alt="anqlogo.svg" style={{ marginTop: "15px", marginLeft: "-3px" }} />
 
-          <Tabs value={value} onChange={handleChange}>
-            <Tab label="Dashboard" />
-            <Tab label="Leader Board" />
-          </Tabs>
+          <Box sx={{ width: '20%' }}>
+            <Box >
+              <StyledTabs
+                value={value}
+                onChange={handleChange}
+                aria-label="styled tabs example">
+                <StyledTab label="Dashboard" />
+                <StyledTab label="Leader Board" />
+              </StyledTabs>
+            </Box>
+          </Box>
+
+
           <Paper style={{
             background: "white",
             height: "55px",
