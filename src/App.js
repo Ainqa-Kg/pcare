@@ -4,6 +4,7 @@ import Dashboard from "./Components/Dashboard"
 import Forgetpwd from "./Components/Forgetpwd"
 import Changepwd from "./Components/Changepwd"
 import Table from "./Components/Table"
+import ApiDocs from "./Components/Apidocs"
 
 
 export default function App() {
@@ -13,7 +14,8 @@ export default function App() {
       {/* <Dashboard /> */}
       {/* <Forgetpwd /> */}
       {/* <Changepwd /> */}
-      <Table />
+      {/* <Table /> */}
+      <ApiDocs/>
      
     
 
