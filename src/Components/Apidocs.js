@@ -26,33 +26,20 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
         marginTop: theme.spacing(3),
     },
     '& .MuiInputBase-input': {
-        // borderRadius: 15,
         position: 'relative',
         borderRadius: "15px 0px 0px 15px",
         backgroundColor: '#00205C',
-        border: '1px solid #ced4da',
+        border: '0px solid #ced4da',
         fontSize: 12,
-        // color:'white',
-        borderColor:'',
-        padding: '4px 25px 7px 10px',
-        transition: theme.transitions.create(['border-color', 'box-shadow']),
-        // Use the system font instead of the default Roboto font.
+        color: 'white',
+        padding: '4px 25px 9px 10px',
         fontFamily: [
             '-apple-system',
             'BlinkMacSystemFont',
-            '"Segoe UI"',
-            'Roboto',
-            '"Helvetica Neue"',
-            'Arial',
-            'sans-serif',
-            '"Apple Color Emoji"',
-            '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
         ].join(','),
         '&:focus': {
-            borderRadius: 4,
             borderColor: '#80bdff',
-            boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+            boxShadow: '0 0 0 0rem rgba(0,123,255,.25)',
         },
     },
 }));
@@ -95,8 +82,6 @@ export default function Logger() {
         setAge(event.target.value);
     };
 
-
-
     return (
         <div>
             <BackgroundImage
@@ -131,7 +116,7 @@ export default function Logger() {
 
                     <KeyboardBackspaceOutlinedIcon style={{
 
-                        marginLeft: "17px",
+                        marginLeft: "14px",
                         width: "20px",
                         marginTop: "16px",
                     }} onclick={window.history.back()} />
@@ -155,11 +140,11 @@ export default function Logger() {
                         style={{
                             borderColor: "E1E1E1C",
                             marginTop: "40px",
-                            marginLeft: "100px",
+                            marginLeft: "95px",
                             borderRadius: "0px 25px 25px 0px",
                             fontSize: "10px",
                             height: "30px",
-                            width: "1100px",
+                            width: "1105px",
                             align: "center"
                         }}
                         hoverColor="#0071F2"
@@ -303,20 +288,26 @@ export default function Logger() {
                     <FormControl style={{
                         marginTop: "-894.5px",
                         width: "80px",
-                        marginLeft: "20px",
+                        marginLeft: "16px",
                     }}>
-
                         <NativeSelect
                             id="demo-customized-select-native"
                             value={age}
                             onChange={handleChange}
-                            input={<BootstrapInput />}
-                        >
-                            
-                            <option value={10}>Post</option>
-                            <option value={20}>Get</option>
-                            <option value={30}>Put</option>
-                            <option value={40}>Delete</option>
+                            input={<BootstrapInput />}>
+
+                            <option value={10} style={{
+                                color: "#00205C",
+                            }}>Post</option>
+                            <option value={20} style={{
+                                color: "#00205C",
+                            }} >Get</option>
+                            <option value={30} style={{
+                                color: "#00205C",
+                            }}>Put</option>
+                            <option value={40} style={{
+                                color: "#00205C",
+                            }}>Delete</option>
                         </NativeSelect>
                     </FormControl>
                 </Paper>
@@ -336,7 +327,6 @@ export default function Logger() {
                         marginLeft: "1050px",
                         borderRadius: "10px",
                         marginTop: "-60px",
-
                     }}>
 
                         <Stack direction="row" spacing={2} >

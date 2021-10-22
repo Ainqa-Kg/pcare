@@ -5,7 +5,8 @@ import Forgetpwd from "./Components/Forgetpwd"
 import Changepwd from "./Components/Changepwd"
 import Table from "./Components/Table"
 import ApiDocs from "./Components/Apidocs"
-
+import Popupdate from './Components/Popupdate'
+import Popupdelete from './Components/Popupdelete'
 
 export default function App() {
   return (
@@ -15,7 +16,9 @@ export default function App() {
       {/* <Forgetpwd /> */}
       {/* <Changepwd /> */}
       {/* <Table /> */}
-      <ApiDocs/>
+      {/* <ApiDocs/> */}
+      {/* <Popupdate/> */}
+      <Popupdelete/>
      
     
 

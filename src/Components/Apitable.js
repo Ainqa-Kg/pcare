@@ -33,27 +33,25 @@ export default function BasicTable() {
                 marginLeft: "17px",
                 borderRadius: "15px 15px 15px 15px",
                 marginTop: "60px",
-
-
             }}>
                 <Table  >
                     <TableHead >
                         <TableRow>
                             <TableCell style={{
                                 backgroundColor: "#00205C",
-                                color:"white",
-                                fontSize:"16px",
+                                color: "white",
+                                fontSize: "13px",
                                 borderRadius: "25px 0px 0px 25px",
                             }}>parameters</TableCell>
                             <TableCell align="right" style={{
                                 backgroundColor: "#00205C",
-                                color:"white",
-                                fontSize:"16px",
+                                color: "white",
+                                fontSize: "13px",
                             }}>Type</TableCell>
                             <TableCell align="right" style={{
-                                color:"white",
+                                color: "white",
                                 backgroundColor: "#00205C",
-                                fontSize:"16px",
+                                fontSize: "13px",
                                 borderRadius: "0px 25px 25px 0px",
                             }}>Description</TableCell>
                         </TableRow>
